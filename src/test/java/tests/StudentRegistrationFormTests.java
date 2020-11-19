@@ -16,7 +16,7 @@ public class StudentRegistrationFormTests {
 
     @BeforeAll
     static void setup() {
-        //открываем большое окно
+        //открываем браузер в максимальном разрешении
         Configuration.startMaximized = true;
     }
 
@@ -49,9 +49,8 @@ public class StudentRegistrationFormTests {
         $("#firstName").val(firstName);
         $("#lastName").val(lastName);
         $("#userEmail").val(email);
-        $("#genterWrapper").$(byText("Female")).click();
+        $("#genterWrapper").$(byText(gender)).click();
         $("#userNumber").val(mobile);
-        $(byText("Female"));
         //set date
         $("#dateOfBirthInput").click();
         $(".react-datepicker__month-select").selectOption(monthOfBirth);
